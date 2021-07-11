@@ -1,0 +1,80 @@
+:root {
+	--bgPage: #4280ff;
+	--bgCalculator: #f8f8ff;
+}
+body {
+	background-image: linear-gradient(
+		to right top,
+		#6b73d1,
+		#6a7ad5,
+		#6a81d9,
+		#6b88dd,
+		#6c8fe0,
+		#7598e4,
+		#7ea0e7,
+		#87a9eb,
+		#99b6f0,
+		#aac4f5,
+		#bcd1fa,
+		#cedfff
+	);
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.calculator {
+	position: absolute;
+	background-color: var(--bgCalculator);
+	width: 40vh;
+	height: 66vh;
+	top: 15%;
+	box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem rgb(233, 233, 233);
+}
+.panel {
+	margin: 1vh;
+	height: 15vh;
+}
+.allbuttons {
+	padding: 1vh;
+	margin: 1vh;
+	display: grid;
+	height: 50vh;
+	justify-content: space-around;
+	grid-template: repeat(4, 10vh) / repeat(4, 8vh);
+}
+.buttons {
+	display: grid;
+	align-items: center;
+	padding: 0;
+	height: 6vh;
+	width: 6vh;
+	outline: 0;
+	color: var(--bgCalculator);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.numbers {
+	cursor: pointer;
+	height: 6vh;
+	display: grid;
+	align-items: center;
+}
+.buttons:nth-child(4) {
+	background-color: #2382f7;
+}
+.buttons:nth-child(8) {
+	background-color: #196bde;
+}
+.buttons:nth-child(12) {
+	background-color: #1557c0;
+}
+.buttons:nth-child(16) {
+	background-color: #13459c;
+}
+.buttons:nth-child(20) {
+	background-color: #0f3375;
+}
