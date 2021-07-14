@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 :root {
 	--bgPage: #4280ff;
-	--bgCalculator: #f8f8ff;
+	--bgCalculator: #f7f8fa;
+	--bgButtons: #e6f0f7;
+	--colorSecondFont: #868686;
+	--font: 'Noto Sans KR', sans-serif;
 }
 body {
 	background-image: linear-gradient(
@@ -18,12 +22,13 @@ body {
 		#bcd1fa,
 		#cedfff
 	);
-	height: 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
 	display: flex;
 	text-align: center;
 	justify-content: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100%;
+	font-family: var(--font);
 }
 
 .calculator {
@@ -32,18 +37,33 @@ body {
 	width: 40vh;
 	height: 66vh;
 	top: 15%;
+	overflow: hidden;
 	box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem rgb(233, 233, 233);
+	border-radius: 2%;
 }
-.panel {
-	margin: 1vh;
-	height: 15vh;
+.panel #displayContent {
+	display: grid;
+	justify-content: right;
+	align-items: flex-end;
+	font-size: 1.8rem;
+	margin: 0 3vh 1.5vh 2vh;
+	height: 7.2vh;
 }
-.allbuttons {
-	padding: 1vh;
-	margin: 1vh;
+.panel #displayOfProcess {
+	display: grid;
+	justify-content: right;
+	align-items: flex-end;
+	font-size: 1rem;
+	height: 6.8vh;
+	margin: 1vh 3vh 0vh 2vh;
+	color: var(--colorSecondFont);
+}
+#keyboard {
+	padding: 0.5vh;
+	margin: 1vh 1vh 2vh 3vh;
 	display: grid;
 	height: 50vh;
-	justify-content: space-around;
+	justify-content: space-between;
 	grid-template: repeat(4, 10vh) / repeat(4, 8vh);
 }
 .buttons {
@@ -54,14 +74,17 @@ body {
 	width: 6vh;
 	outline: 0;
 	color: var(--bgCalculator);
-	border-radius: 50%;
 	cursor: pointer;
+	border-radius: 42%;
 }
 .numbers {
 	cursor: pointer;
+	width: 6vh;
 	height: 6vh;
 	display: grid;
+	background-color: var(--bgButtons);
 	align-items: center;
+	border-radius: 42%;
 }
 .buttons:nth-child(4) {
 	background-color: #2382f7;
